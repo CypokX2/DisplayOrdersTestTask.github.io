@@ -1,0 +1,68 @@
+
+@import '../order-wrapper.component.css';
+@import '../../app.component.css';
+
+.order-overview {
+  display: grid;
+  min-width: min-content;
+  grid-template-rows: 1fr min-content;
+  grid-template-columns: minmax(min-content, auto);  
+  overflow-x: hidden;
+  align-items: start;
+  --legend-backgroind-color: white;
+}
+
+.header-container {
+  display:grid;
+  grid-template-columns: min-content;
+  grid-template-rows: auto;
+  overflow-y: auto;
+  max-height: 100%;
+  min-height: 2em;
+}
+.header-item {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-style:dashed;
+  border-width:1px;
+  border-color:transparent;
+  transition-property: border-color;
+  transition-duration: 0.5s;
+}
+  .header-item:hover, .header-item:focus, .header-item:active {
+    border-color: #000;
+  }
+
+
+
+.order-name {
+  margin: 0.3em;
+  user-select: none;
+  cursor: default;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+.order-moment {
+  margin: 0.3em;
+  user-select: none;
+  cursor: default;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.status-legend {
+  display: grid;
+  grid-template-rows: auto;
+  background-color: var(--legend-backgroind-color);
+}
+.status-legend-item{
+  display:grid;
+  grid-template-columns:min-content auto;
+  word-wrap:break-word;
+  white-space: nowrap;
+}
+
+.order-overview-loader{
+  align-self:center;
+  justify-self:center;
+}

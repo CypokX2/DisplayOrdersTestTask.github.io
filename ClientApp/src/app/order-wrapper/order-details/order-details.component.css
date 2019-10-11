@@ -1,0 +1,71 @@
+
+@import '../order-wrapper.component.css';
+@import '../../app.component.css';
+
+
+.order-details {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: min-content auto min-content;
+  align-items: start;
+  --details-background-color: white;
+  --details-header-color: white;
+  --details-footer-color: white;
+  --details-body-color: white;
+  background-color: var(--details-background-color);
+}
+
+.order-details-loader {
+  align-self: center;
+  justify-self: center;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.relayed-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.details-header-layout {
+  grid-template-rows: auto;
+  background-color: var(--details-header-color);
+}
+  .details-header-layout > * {
+    margin-bottom: 0.7em;
+    margin-top: 0.5em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    border-bottom: var(--outline-width) var(--outline-style) var(--outline-color);
+  }
+.details-footer-layout {
+  grid-template-rows: auto;
+  background-color: var(--details-footer-color);
+}
+  .details-footer-layout > * {
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    background-color: var(--details-footer-color);
+    border-top: var(--outline-width) var(--outline-style) var(--outline-color);
+  }
+
+.details-body-layout {
+  grid-template-rows: auto;
+  overflow-y: auto;
+  background-color: var(--details-body-color);
+  max-height: 100%;
+}
+
+  .details-body-layout > div {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    border-bottom: var(--outline-width) var(--outline-style) var(--outline-color);
+  }
+
+
+
+ 
